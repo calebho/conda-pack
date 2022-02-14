@@ -25,10 +25,11 @@ setup(name='conda-pack',
       long_description_content_type="text/markdown",
       packages=['conda_pack'],
       package_data={'conda_pack': ['scripts/windows/*', 'scripts/posix/*']},
-      entry_points='''
-        [console_scripts]
-        conda-pack=conda_pack.cli:main
-      ''',
+      entry_points={
+          "console_scripts": [
+              "conda-pack=conda_pack.cli:main",
+          ],
+      },
       install_requires=['setuptools'],
       python_requires='>=3.7',
       zip_safe=False)
